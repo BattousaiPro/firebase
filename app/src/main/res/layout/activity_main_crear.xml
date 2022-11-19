@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainCrear">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="633dp"
+        android:layout_height="839dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/captura_de_pantalla_2022_11_19_a_la_s__00_43_37" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="271dp"
+        android:layout_height="177dp"
+        android:layout_marginBottom="37dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:hint="Nombre"
+            android:inputType="textPassword"
+            android:textColorHint="#B51F1F"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:hint="Edad"
+            android:inputType="textPassword"
+            android:textColorHint="#B51F1F"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:hint="Color"
+            android:inputType="textPassword"
+            android:textColorHint="#B51F1F"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="155dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/batusito" />
+
+    <Button
+        android:id="@+id/btn_Registrar"
+        android:layout_width="234dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#000000"
+        android:text="Registrar Mascota"
+        android:textColor="#B51F1F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="156dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Batu Mascoteria"
+        android:textColor="#5A4213"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
