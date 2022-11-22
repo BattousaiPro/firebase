@@ -9,23 +9,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainCrear extends AppCompatActivity {
     Button btn_add;
-    EditText nombre, edad, color;
-    private FirebaseFirestore mFirestore;
+    EditText nombre;
+    EditText edad;
+    EditText color;
+    private FirebaseFirestore mFirestore; // Agrega DePendencia Con.Google.firebase
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_crear);
 
-        this.setTitel("Crear Mascotas");
+        this.setTitle("Crear Mascotas");  // Titulo De Banner
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mFirestore = FirebaseFirestore.getInstance();
+        mFirestore = FirebaseFirestore.getInstance(); //Apunta a La Base De Datos
 
+        //Genera Casting
         nombre = findViewById(R.id.addnombre);
         edad = findViewById(R.id.addedad);
         color = findViewById(R.id.addcolor);
@@ -33,14 +41,14 @@ public class MainCrear extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public  void onClick(View view){
-                String n = nombre.getText().toString();
-                String e = edad.getText().toString();
-                String c = color.getText().toString();
+                String nomPet = nombre.getText().toString();
+                String yearOldPet = edad.getText().toString();
+                String colorPet = color.getText().toString();
 
-                if (n.isEmpty() && e.isEmpty() && c.isEmpty()){
+                if (nomPet.isEmpty() && yearOldPet.isEmpty() && colorPet.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Ingresar Los Datos", Toast.LENGTH_SHORT).show();
                 }else{
-                    postPet(n, e, c);
+                    postPet(nomPet, yearOldPet, colorPet);
                 }
             }
         });
@@ -64,7 +72,8 @@ public class MainCrear extends AppCompatActivity {
             }
         });
     }
-    public boolean onSupporNavigateUp(){
+
+    public boolean onSupporNavigateUp(){ //Flecha Hacia Atrars
         onBackPressed();
         return false;
     }

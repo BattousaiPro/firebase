@@ -15,5 +15,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Agregar(View view){
         Intent Agregar = new Intent(MainActivity.this, MainCrear.class);
+        startActivity(Agregar);
     }
 }
