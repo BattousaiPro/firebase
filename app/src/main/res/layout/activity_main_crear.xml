@@ -8,13 +8,13 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="633dp"
-        android:layout_height="839dp"
+        android:layout_width="669dp"
+        android:layout_height="936dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/captura_de_pantalla_2022_11_19_a_la_s__00_43_37" />
+         />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -26,8 +26,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <EditText
             android:id="@+id/addnombre"
@@ -36,8 +35,10 @@
             android:ems="10"
             android:fontFamily="sans-serif-black"
             android:hint="Nombre:"
-            android:inputType="textPassword"
-            android:textColorHint="#B51F1F"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#7CB51F"
             android:textSize="20sp" />
 
         <EditText
@@ -47,8 +48,10 @@
             android:ems="10"
             android:fontFamily="sans-serif-black"
             android:hint="Edad:"
-            android:inputType="textPassword"
-            android:textColorHint="#B51F1F"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#77B51F"
             android:textSize="20sp" />
 
         <EditText
@@ -58,8 +61,10 @@
             android:ems="10"
             android:fontFamily="sans-serif-black"
             android:hint="Color:"
-            android:inputType="textPassword"
-            android:textColorHint="#B51F1F"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#1FB544"
             android:textSize="20sp" />
 
         <Button
@@ -68,49 +73,31 @@
             android:layout_height="54dp"
             android:layout_marginBottom="92dp"
             android:backgroundTint="#000000"
+            android:fontFamily="sans-serif-black"
+            android:onClick="Agregar"
             android:text="Registrar Mascota"
-            android:textColor="#B51F1F" />
+            android:textColor="#23A888" />
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="155dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="262dp"
-        android:layout_marginBottom="256dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/batusito" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="157dp"
         android:fontFamily="sans-serif-black"
-        android:text="Batu Mascoteria"
-        android:textColor="#5A4213"
+        android:text="Mascoteria"
+        android:textColor="#166388"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="400dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/preview" />
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/purina_c2_ae_20la_20llegada_20del_20gatito_20a_20casa_1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="105dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

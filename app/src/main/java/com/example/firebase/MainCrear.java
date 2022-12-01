@@ -41,25 +41,25 @@ public class MainCrear extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public  void onClick(View view){
-                String nomPet = nombre.getText().toString();
-                String yearOldPet = edad.getText().toString();
-                String colorPet = color.getText().toString();
+                String n = nombre.getText().toString();
+                String e = edad.getText().toString();
+                String c = color.getText().toString();
 
-                if (nomPet.isEmpty() && yearOldPet.isEmpty() && colorPet.isEmpty()){
+                if (n.isEmpty() && e.isEmpty() && c.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Ingresar Los Datos", Toast.LENGTH_SHORT).show();
                 }else{
-                    postPet(nomPet, yearOldPet, colorPet);
+                    postPet(n, e, c);
                 }
             }
         });
     }
     private void postPet(String n, String e, String c){
         Map<String, Object> map = new HashMap<>();
-        map.put("nombre", nombre);
-        map.put("edad", edad);
-        map.put("colar", color);
+        map.put("nombre", nombre.getText().toString());
+        map.put("edad", edad.getText().toString());
+        map.put("color", color.getText().toString());
 
-        mFirestore.collection("Mascotas").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>(){
+        mFirestore.collection("pet").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>(){
             @Override
             public void onSuccess(DocumentReference documentReference ){
                 Toast.makeText(getApplicationContext(),"Creado Exitosamente", Toast.LENGTH_SHORT).show();
